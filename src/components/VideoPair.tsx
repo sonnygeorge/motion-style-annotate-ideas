@@ -20,7 +20,10 @@ export default function VideoPair({ videoA, videoB }: Props) {
             key={src}
             src={videoUrl(src)}
             controls
-            preload="metadata"
+            autoPlay
+            muted
+            loop
+            preload="auto"
             playsInline
             className="aspect-video w-full bg-black"
           />
