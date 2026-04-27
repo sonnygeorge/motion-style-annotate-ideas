@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/manifest.ts","./src/vite-env.d.ts","./src/components/layout.tsx","./src/components/pairselector.tsx","./src/components/submitbar.tsx","./src/components/toast.tsx","./src/components/videopair.tsx","./src/pages/carefulness1.tsx","./src/pages/home.tsx","./src/pages/openended1.tsx"],"version":"5.9.3"}
