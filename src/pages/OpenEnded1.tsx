@@ -6,7 +6,7 @@ import SubmitBar from "../components/SubmitBar";
 import { useToast } from "../components/Toast";
 import { humanizeTask, useManifest } from "../manifest";
 
-type Relation = "more" | "less";
+type Relation = "" | "more" | "less";
 type Subject = "A" | "B";
 type Row = {
   id: string;
@@ -17,7 +17,7 @@ type Row = {
 
 const newRow = (): Row => ({
   id: crypto.randomUUID(),
-  relation: "more",
+  relation: "",
   phrase: "",
   subject: "A",
 });
@@ -36,7 +36,8 @@ export default function OpenEnded1() {
   const pair = pairs[index];
   const taskLabel = humanizeTask(pair.task);
   const canSubmit =
-    noDiff || rows.some((r) => r.phrase.trim().length > 0);
+    noDiff ||
+    rows.some((r) => r.relation !== "" && r.phrase.trim().length > 0);
 
   const updateRow = (id: string, patch: Partial<Row>) =>
     setRows((rs) => rs.map((r) => (r.id === id ? { ...r, ...patch } : r)));
@@ -99,15 +100,18 @@ export default function OpenEnded1() {
                   }
                   className="rounded border border-slate-300 bg-white px-2 py-1 text-sm shadow-sm focus:border-slate-500 focus:outline-none focus:ring-1 focus:ring-slate-500"
                 >
+                  <option value="" disabled>
+                    [ select ]
+                  </option>
                   <option value="more">more</option>
                   <option value="less">less</option>
                 </select>
                 <input
                   type="text"
-                  placeholder="e.g. precision, hesitation, force…"
+                  placeholder="e.g. carefulness, hesitation, smoothness, humanness, roundaboutness…"
                   value={row.phrase}
                   onChange={(e) => updateRow(row.id, { phrase: e.target.value })}
-                  className="min-w-[12ch] flex-1 rounded border border-slate-300 bg-white px-2 py-1 text-sm shadow-sm focus:border-slate-500 focus:outline-none focus:ring-1 focus:ring-slate-500"
+                  className="min-w-[12ch] flex-1 rounded border border-slate-300 bg-white px-2 py-1 text-sm shadow-sm placeholder:text-[9px] focus:border-slate-500 focus:outline-none focus:ring-1 focus:ring-slate-500"
                 />
                 <span>in</span>
                 <select
