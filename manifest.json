@@ -14,18 +14,18 @@
     "videoB": "data/agibot-tidy_up_food_in_freezer/episode_000013.mp4"
   },
   {
-    "slug": "robo-area-put_the_banana_in_the_basket",
-    "dataset": "robo",
-    "task": "area-put_the_banana_in_the_basket",
-    "videoA": "data/robo-area-put_the_banana_in_the_basket/paligemma_fast_specialist_droid_2026-01-29T01_15_26.277974_video_wrist.mp4",
-    "videoB": "data/robo-area-put_the_banana_in_the_basket/paligemma_vq_droid_2026-01-29T01_12_26.030164_video_wrist.mp4"
-  },
-  {
     "slug": "robo-arena-move_the_can_into_the_plate",
     "dataset": "robo",
     "task": "arena-move_the_can_into_the_plate",
     "videoA": "data/robo-arena-move_the_can_into_the_plate/paligemma_fast_droid_2025-10-20T21_37_42.786694_video_right.mp4",
     "videoB": "data/robo-arena-move_the_can_into_the_plate/pi05_droid_2025-10-20T21_30_42.571425_video_right.mp4"
+  },
+  {
+    "slug": "robo-arena-put_the_banana_in_the_basket",
+    "dataset": "robo",
+    "task": "arena-put_the_banana_in_the_basket",
+    "videoA": "data/robo-arena-put_the_banana_in_the_basket/paligemma_fast_specialist_droid_2026-01-29T01_15_26.277974_video_wrist.mp4",
+    "videoB": "data/robo-arena-put_the_banana_in_the_basket/paligemma_vq_droid_2026-01-29T01_12_26.030164_video_wrist.mp4"
   },
   {
     "slug": "robo-arena-put_the_glove_on_the_white_paper",
